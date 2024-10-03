@@ -1,14 +1,12 @@
-# Use a base image, such as Ubuntu
-FROM ubuntu:latest
+# Use an official base image with Java
+FROM openjdk:11-jre-slim
 
-# Set the working directory inside the container
-WORKDIR /app
 
-# Copy the local main.sh script into the container
-COPY main.sh .
+# Copy everything from the current directory to /app in the container
+COPY . .
 
-# Give execute permission to the script
+# Make sure main.sh is executable
 RUN chmod +x main.sh
 
-# Set the script as the entrypoint for the container
-ENTRYPOINT ["./main.sh"]
+# Command to run the main.sh script
+CMD ["./main.sh"]
