@@ -8,10 +8,9 @@ listener_01:
   forward_ip: false
   forward_ip_header: X-Real-IP
   redirect_legacy_clients_to: 'null'
-  server_icon: server-icon.png
+  server_icon: IMG_1027.png
   server_motd:
-  - '&b&kllll&e&lADSCRAFT&nSEASON 8&bIS OPEN &kllll&r'
-  - '     &c&lHERE!!!!'
+  - 'Made By Potato'
   allow_motd: true
   allow_query: true
   request_motd_cache:

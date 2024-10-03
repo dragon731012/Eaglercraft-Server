@@ -1,6 +1,50 @@
-<button onclick="launchServer()">Launch</button>
+<h1 style="
+    font-family: minecraft;
+    color: white;
+    font-size: 10vh;
+    font-weight: 100;
+">Potato Server</h1>
+<button onclick="launchServer()">Game</button>
+<button onclick="openChat()">Chat</button>
 <script>
   function launchServer(){
+    localStorage.setItem("game","true");
     window.location.href="/game.html";
   }
+  function openChat(){
+    document.write("<meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests' /><iframe style='border:0px solid white;width:100%;height:100%;position:absolute;left:0px;top:0px;' src='https://innate.ape3d.com/chat/?group=PotatoMCServerChat&password=idkbro&inframe=yes'></iframe>");
+  }
 </script>
+<style>
+  @font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+  }
+
+  button{
+    font-family: minecraft;
+    color: white;
+    background: #6f6f6f;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    border: 1vh solid black;
+    margin: 1vh;
+  }
+
+  button:hover{
+    color:#ffff00;
+    background:#7e88bf;
+  }
+
+  body{
+    background: url(dirt.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+</style>
